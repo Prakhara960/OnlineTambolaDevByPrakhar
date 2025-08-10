@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tambola Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="home">
+    <h1>Tambola Game</h1>
+    <button onclick="showHost()">Host Game</button>
+    <button onclick="showJoin()">Join Game</button>
+  </div>
+
+  <div id="hostPanel" style="display:none;">
+    <h2>Host a Game</h2>
+    <input id="hostName" placeholder="Enter your name">
+    <button onclick="createRoom()">Create Room</button>
+    <div id="hostInfo"></div>
+    <div id="dividendsPanel" style="display:none;">
+      <h3>Set Dividends</h3>
+      <div id="dividendList"></div>
+      <button onclick="saveDividends()">Save Dividends</button>
+    </div>
+  </div>
+
+  <div id="joinPanel" style="display:none;">
+    <h2>Join Game</h2>
+    <input id="joinCode" placeholder="Enter Room Code">
+    <input id="playerName" placeholder="Enter your name">
+    <button onclick="joinRoom()">Join</button>
+    <div id="ticketDisplay"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
