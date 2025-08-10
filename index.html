@@ -1,36 +1,40 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="hi">
 <head>
-  <title>Tambola Game</title>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IntelliTambola - Advanced</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="home">
-    <h1>Tambola Game</h1>
-    <button onclick="showHost()">Host Game</button>
-    <button onclick="showJoin()">Join Game</button>
-  </div>
+  <div class="wrap">
+    <header><h1>IntelliTambola (Advanced)</h1><div class="small">Host or Join — no Firebase, Google Sheets backend</div></header>
 
-  <div id="hostPanel" style="display:none;">
-    <h2>Host a Game</h2>
-    <input id="hostName" placeholder="Enter your name">
-    <button onclick="createRoom()">Create Room</button>
-    <div id="hostInfo"></div>
-    <div id="dividendsPanel" style="display:none;">
-      <h3>Set Dividends</h3>
-      <div id="dividendList"></div>
-      <button onclick="saveDividends()">Save Dividends</button>
-    </div>
-  </div>
+    <section class="card">
+      <div class="row">
+        <input id="hostName" placeholder="Host ka naam (optional)">
+        <input id="maxPlayers" placeholder="Max players (optional)">
+        <button id="createBtn">Create Room</button>
+      </div>
+      <div class="small" id="createInfo"></div>
+      <div id="divForm" style="display:none" class="small">
+        <h4>Set Dividends</h4>
+        <div id="divInputs"></div>
+        <button id="saveDivsBtn">Save Dividends</button>
+      </div>
+    </section>
 
-  <div id="joinPanel" style="display:none;">
-    <h2>Join Game</h2>
-    <input id="joinCode" placeholder="Enter Room Code">
-    <input id="playerName" placeholder="Enter your name">
-    <button onclick="joinRoom()">Join</button>
-    <div id="ticketDisplay"></div>
-  </div>
+    <section class="card">
+      <div class="row">
+        <input id="joinCode" placeholder="Room Code">
+        <input id="playerName" placeholder="Your name">
+        <button id="joinBtn">Join Room</button>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <div id="roomArea"></div>
+    <footer class="small">Deploy Apps Script, set GAS_URL in script.js, push to GitHub Pages to host.</footer>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
