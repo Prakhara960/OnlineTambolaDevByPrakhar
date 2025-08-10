@@ -1,5 +1,5 @@
 // Replace API_URL with your deployed Apps Script Web App URL (doGet style)
-const API_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_WEBAPP_URL";
+const API_URL = "https://script.google.com/macros/s/AKfycbyfXWKbmnIsqYofRdWFhoUKhQMXq2RptSwaZRFpa8uwxuY3vN7m9IZuERGot6o8wAnV/exec";
 
 function showHost(){
   document.getElementById('homePanel').style.display = 'none';
