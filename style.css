@@ -1,5 +1,16 @@
-body { font-family: Arial, sans-serif; background: #f4f4f4; text-align: center; }
-button { padding: 10px; margin: 5px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
-input { padding: 8px; margin: 5px; }
-table { margin: auto; border-collapse: collapse; }
-td { width: 40px; height: 40px; text-align: center; border: 1px solid #ccc; }
+:root{--bg:#071428;--card:#0b2940;--accent:#06b6d4;--muted:#9fb0c6}
+body{font-family:Inter,system-ui,Arial;margin:0;background:linear-gradient(180deg,#041225,#06142a);color:#e7f0f7}
+.wrap{max-width:1000px;margin:18px auto;padding:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px;border-radius:10px;margin-top:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input,button{padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit}
+button{cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.ticket{background:linear-gradient(180deg,#062033,#042235);padding:8px;border-radius:8px}
+.ticket-table{border-collapse:collapse;width:100%}
+.ticket-table td{padding:6px;text-align:center;border-radius:6px}
+.empty{opacity:0.12}
+.num-badge{display:inline-block;width:36px;height:36px;line-height:36px;border-radius:8px;text-align:center;margin:4px;background:rgba(255,255,255,0.03)}
+.num-drawn{background:linear-gradient(90deg,#06b6d4,#0ea5a4);color:#012b2b;font-weight:700}
